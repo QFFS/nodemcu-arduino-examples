@@ -80,7 +80,7 @@ void reconnect()
     if (client.connect("ESP8266Client", mqtt_user, mqtt_password))
     {
       Serial.println("connected");
-      client.subscribe("inTopic");
+      client.subscribe("ESP8266Client/inTopic");
     }
     else
     {
