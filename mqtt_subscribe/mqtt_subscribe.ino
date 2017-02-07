@@ -10,7 +10,7 @@
 #include <Ticker.h>
 
 
-#define MQTT_PORT 19953
+#define MQTT_PORT xxxxx
 
 const char *ssid = "xxxxx";
 const char *password = "xxxxxx";
