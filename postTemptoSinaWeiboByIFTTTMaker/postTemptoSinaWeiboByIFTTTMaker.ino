@@ -45,7 +45,7 @@ void setup()
     Serial.println(WiFi.localIP());
     sensor_inhouse.begin();
 }
-String postUri(String event, String key)
+String postUrl(String event, String key)
 {  
     return String("/trigger/") + event + String("/with/key/") + key + String("?value1=") + String(sensor_inhouse.getTempCByIndex(0));
 }
@@ -58,7 +58,7 @@ void loop()
     return;
     }
     sensor_inhouse.requestTemperatures();
-    client.print(String("POST ")  + postUri(event, key) + 
+    client.print(String("POST ")  + postUrl(event, key) + 
                 String(" HTTP/1.1\r\n") +
                String("Host: maker.ifttt.com\r\n") + 
                String("Accept: */*\r\n") + 
